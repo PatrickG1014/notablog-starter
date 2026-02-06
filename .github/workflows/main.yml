@@ -31,7 +31,7 @@ jobs:
           npm install -g .
 
       - name: Build site
-        run: notablog generate .
+        run: notablog generate --fresh .
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
