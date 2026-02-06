@@ -32,3 +32,11 @@ jobs:
 
       - name: Build site
         run: notablog generate .
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: PatrickG1014/PatrickG1014.github.io
+          BRANCH: main
+          FOLDER: public
