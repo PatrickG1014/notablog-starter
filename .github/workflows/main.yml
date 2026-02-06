@@ -32,6 +32,8 @@ jobs:
 
       - name: Build site
         run: notablog generate --fresh .
+        env:
+          NOTION_TOKEN_V2: ${{ secrets.NOTION_TOKEN_V2 }}
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
